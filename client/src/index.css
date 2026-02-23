@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Earthy, Luxury Palette */
+  --background: 40 20% 99%;      /* Very soft cream/off-white */
+  --foreground: 24 10% 15%;      /* Dark charcoal/brown text */
+  
+  --primary: 32 40% 45%;         /* Muted terracotta/bronze */
+  --primary-foreground: 40 20% 98%;
+
+  --secondary: 40 15% 92%;       /* Light beige for cards/sections */
+  --secondary-foreground: 24 10% 20%;
+
+  --muted: 40 10% 90%;
+  --muted-foreground: 24 5% 45%;
+
+  --accent: 150 20% 35%;         /* Deep forest green for subtle accents */
+  --accent-foreground: 40 20% 98%;
+
+  --destructive: 0 60% 50%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 40 10% 85%;
+  --input: 40 10% 85%;
+  --ring: 32 40% 45%;
+  
+  --radius: 0.25rem;             /* Sharper corners for luxury feel */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Lato', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    @apply tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+}
